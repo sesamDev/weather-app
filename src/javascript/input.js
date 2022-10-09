@@ -1,4 +1,4 @@
-import getWeatherData from "./weather-data";
+import getFormattedWeatherData from "./weather-data";
 
 export default class HandleInput {
   static inputField = document.getElementById("inputSearch");
@@ -8,7 +8,7 @@ export default class HandleInput {
   static start() {
     this.submitBtn.addEventListener("click", () => {
       const inputValue = this.getInputValue();
-      getWeatherData(inputValue, "metric");
+      getFormattedWeatherData(inputValue, "metric");
     });
   }
 
