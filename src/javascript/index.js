@@ -1,8 +1,10 @@
 import "../css/style.css";
-import hello from "./hello";
+import getWeatherData from "./app";
 
 console.log("Hello world");
 
 const button = document.querySelector("button");
 
-button.addEventListener("click", hello);
+button.addEventListener("click", () => {
+  getWeatherData("Stockholm", "metric");
+});
