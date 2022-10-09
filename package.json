@@ -42,5 +42,8 @@
   },
   "dependencies": {
     "gh-pages": "^4.0.0"
-  }
+  },
+  "eslintIgnore": [
+    "bundle.js"
+  ]
 }
