@@ -8,12 +8,21 @@
     <script src="bundle.js" defer></script>
   </head>
   <body>
-    <form action="none">
-      <div>
-        <input type="text" name="search" id="inputSearch" />
-        <label for="search">Enter city name</label>
+    <img id="backgroundImage" src="" alt="background image" />
+    <div class="container">
+      <div class="current-weather">
+        <h1 class="city">Stockholm, SE</h1>
+        <h3 class="current-temp">24°C</h3>
+        <p class="feels-like">Feels like: 25°C</p>
+        <p class="windspeed">Windspeed: 5m/s</p>
       </div>
-      <button type="button" id="submitBtn">Get Weather</button>
-    </form>
+      <form action="none">
+        <div>
+          <input type="text" name="search" id="inputSearch" />
+          <label for="search">Enter city name</label>
+        </div>
+        <button type="button" id="submitBtn">Get Weather</button>
+      </form>
+    </div>
   </body>
 </html>
