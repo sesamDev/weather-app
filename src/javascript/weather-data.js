@@ -5,7 +5,7 @@ async function getWeatherData(city, unit) {
   let weatherData;
   try {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&APPID=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&APPID=${API_KEY}`
     );
     weatherData = await response.json();
   } catch (error) {

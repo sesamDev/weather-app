@@ -1,4 +1,4 @@
-import BackgroundImage from "../background-images/bg.jpg";
+import BackgroundImage from "../Background-images/bg.jpg";
 
 export default class UI {
   static bg = document.getElementById("backgroundImage");
