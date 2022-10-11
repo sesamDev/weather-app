@@ -8,7 +8,7 @@ export default class HandleInput {
   static start() {
     this.submitBtn.addEventListener("click", () => {
       const inputValue = this.getInputValue();
-      getFormattedWeatherData(inputValue, "metric");
+      console.log(getFormattedWeatherData(inputValue, "metric"));
     });
   }
 

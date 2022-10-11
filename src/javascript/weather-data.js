@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 const API_KEY = "419b41cd14e38896374646981d529f46"; // Free key, not a subscription key.
 
 async function getWeatherData(city, unit) {
@@ -13,18 +14,27 @@ async function getWeatherData(city, unit) {
   return weatherData;
 }
 
-// main > feels_like/humidity/temp/temp_max/temp_min
-// name
-// sys > country/sunrise/sunset
-// weather > description/main
-// wind > speed
-
-// async function getCurrentWeather(){
-//   const data = await getWeatherData()
-
-// }
-
 export default async function formattedWeatherData(city, unit) {
-  const rawData = await getWeatherData(city, unit);
-  console.log(rawData);
+  const rawDataObj = await getWeatherData(city, unit);
+  const {
+    name,
+    weather: [{ main: weatherCondition, description: weatherDescription }],
+    main: { temp, feels_like, temp_min, temp_max },
+    wind: { speed: windspeed },
+    sys: { country, sunrise, sunset },
+  } = rawDataObj;
+
+  return {
+    name,
+    weatherCondition,
+    weatherDescription,
+    temp,
+    feels_like,
+    temp_min,
+    temp_max,
+    windspeed,
+    country,
+    sunrise,
+    sunset,
+  };
 }
